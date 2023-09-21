@@ -13,3 +13,13 @@ class BookmarkList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         """Create Bookmark"""
         serializer.save(owner=self.request.user)
+
+
+class BookmarkDetail(generics.RetrieveDestroyAPIView):
+    """
+    Get/Delete Bookmark view.
+    No need to update as bookmarks are either existant or not
+    """
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = BookmarkSerializer
+    queryset = Bookmark.objects.all()
