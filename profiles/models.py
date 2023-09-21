@@ -13,7 +13,7 @@ class Profile(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_profile_ev37hy'
     )
-    
+
     class Meta:
         ordering = ['-created_at']
 
