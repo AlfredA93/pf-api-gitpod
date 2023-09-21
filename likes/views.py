@@ -13,3 +13,13 @@ class LikeList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         """Create Like"""
         serializer.save(owner=self.request.user)
+
+
+class LikeDetail(generics.RetrieveDestroyAPIView):
+    """
+    Get/Delete like view.
+    No need to update as likes are existant or not
+    """
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = LikeSerializer
+    queryset = Like.objects.all()
