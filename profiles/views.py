@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .models import Profile
 
-# Create your views here.
+
+class ProfileList(generics.ListAPIView):
+    """Display a list of all profiles"""
+    queryset = Profile.objects.all()
