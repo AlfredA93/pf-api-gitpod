@@ -7,3 +7,9 @@ class ProfileList(generics.ListAPIView):
     """Display a list of all profiles"""
     serializer_class = ProfileSerializer
     queryset = Profile.objects.all()
+
+
+class ProfileDetail(generics.RetrieveUpdateAPIView):
+    """Retrieve and/or update the profile if owner"""
+    serializer_class = ProfileSerializer
+    queryset = Profile.objects.all()
