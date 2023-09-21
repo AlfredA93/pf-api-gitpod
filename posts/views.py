@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from rest_framework import generics
+from photofootapi.permissions import IsOwnerOrReadOnly
+from .models import Post
+from .serializers import PostSerializer
 
-# Create your views here.
+
+class PostList(generics.ListCreateAPIView):
+    """
+    List posts or create a post if logged in
+    """
+    serializer_class = PostSerializer
+    queryset = Post.objects.all()
