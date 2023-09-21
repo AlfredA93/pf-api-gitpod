@@ -13,3 +13,10 @@ class CommentList(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         """Assigns owner field from the current user"""
         serializer.save(owner=self.request.user)
+
+
+class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
+    """View/Update/Delete a comment"""
+    permission_classes = [IsOwnerOrReadOnly]
+    serializer_class = CommentDetailSerializer
+    queryset = Comment.objects.all()
