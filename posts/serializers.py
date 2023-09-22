@@ -10,6 +10,8 @@ class PostSerializer(serializers.ModelSerializer):
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     like_id = serializers.SerializerMethodField()
+    likes_count = serializers.ReadOnlyField()
+    comments_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         """Image Validation"""
@@ -46,6 +48,6 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields = [
             'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
-            'title', 'travel', 'summary', 'content', 'image',
-            'created_at', 'updated_at', 'like_id',
+            'title', 'travel', 'summary', 'content', 'image', 'like_id',
+            'comments_count', 'likes_count', 'created_at', 'updated_at'
         ]
