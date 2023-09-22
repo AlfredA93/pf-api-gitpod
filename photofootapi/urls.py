@@ -19,10 +19,10 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('', include('profiles.urls')),
-    path('', include('posts.urls')),
-    path('', include('comments.urls')),
-    path('', include('likes.urls')),
-    path('', include('bookmarks.urls')),
-    path('', include('followers.urls')),
+    path('api/profiles/', include('profiles.urls')),
+    path('api/posts/', include('posts.urls')),
+    path('api/comments/', include('comments.urls')),
+    path('api/likes/', include('likes.urls')),
+    path('api/bookmarks/', include('bookmarks.urls')),
+    path('api/followers/', include('followers.urls')),
 ]
