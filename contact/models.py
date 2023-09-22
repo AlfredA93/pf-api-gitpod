@@ -19,6 +19,6 @@ class Message(models.Model):
         send_mail(
             subject="PhotoFootprint | Thank you for contacting us",
             message="Thank you for contacting us, we'll get back to you soon",
-            from_email="photofootprintcontact@gmail.com",
+            from_email="teamphotofootprint@hotmail.com",
             recipient_list=[self.email],
         )
