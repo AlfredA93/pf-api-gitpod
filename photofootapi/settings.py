@@ -104,7 +104,7 @@ DATABASES = {
 }
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.live.com"
+EMAIL_HOST = "smtp.office365.com"
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASS")
 EMAIL_PORT = 587
