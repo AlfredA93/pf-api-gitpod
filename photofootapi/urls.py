@@ -25,4 +25,5 @@ urlpatterns = [
     path('api/likes/', include('likes.urls')),
     path('api/bookmarks/', include('bookmarks.urls')),
     path('api/followers/', include('followers.urls')),
+    path('api/contact/', include('contact.urls')),
 ]
