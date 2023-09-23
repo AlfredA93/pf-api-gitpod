@@ -1,3 +1,4 @@
+from django.contrib.humanize.templatetags.humanize import naturaltime
 from rest_framework import serializers
 from .models import Post
 from likes.models import Like
@@ -12,6 +13,8 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     comments_count = serializers.ReadOnlyField()
+    created_at = serializers.SerializerMethodField()
+    updated_at = serializers.SerializerMethodField()
 
     def validate_image(self, value):
         """Image Validation"""
@@ -26,6 +29,13 @@ class PostSerializer(serializers.ModelSerializer):
                 'Image width larger than 4096px'
             )
         return value
+    def get_created_at(self, obj):
+        """Set DATETIME format of created_at field to naturaltime"""
+        return naturaltime(obj.created_at)
+
+    def get_updated_at(self, obj):
+        """Set DATETIME format of updated_at field to naturaltime"""
+        return naturaltime(obj.updated_at)
 
     def get_is_owner(self, obj):
         """Get the is_owner field"""
