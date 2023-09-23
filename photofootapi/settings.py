@@ -59,10 +59,10 @@ REST_AUTH_SERIALIZERS = {
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$h_dibv@^^i5%g5u1*5o(7rol@$7i$^p@82o5#ibde_gk9k4m('
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS"), '127.0.0.1']
 
