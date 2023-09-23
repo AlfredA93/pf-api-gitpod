@@ -30,6 +30,8 @@ class PostList(generics.ListCreateAPIView):
         'bookmarks__owner__profile',
         # user posts
         'owner__profile',
+        # travel type
+        'travel',
     ]
 
     search_fields = [
