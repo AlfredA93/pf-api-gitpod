@@ -64,7 +64,7 @@
 
 ### Future Features <a name="future"></a>
 
-- Feature 1
+- Add a map which shows the journey in where the user has travelled.
 - Feature 2
 - Feature 3
 
@@ -93,7 +93,7 @@ All testing and code validation is shown in the seperate [TESTING.md](TESTING.md
 ![Model Image](documentation/backend-imgs/erd.webp)
 
 ### Agile (backend) <a name="agile-be"></a>
-To manage the tasks and user stories on this project I used GitHub Projects. For the backend I wrote Milestones for each app, with issues (tasks) to be completed within each milestone, which could then be 'closed' when each was completed. Here is a link to the [PhotoFootprint GitHub Project](https://github.com/users/AlfredA93/projects/6) and [PhotoFootprint Milestones]()
+To manage the tasks and user stories on this project I used GitHub Projects. For the backend I wrote Milestones for each app, with issues (tasks) to be completed within each milestone, which could then be 'closed' when each was completed. Here is a link to the [PhotoFootprint GitHub Project](https://github.com/users/AlfredA93/projects/6) and [PhotoFootprint Milestones](https://github.com/AlfredA93/pf-api/milestones)
 
 ![Agile Project](documentation/backend-imgs/agile-project.webp)
 
@@ -128,12 +128,35 @@ To manage the tasks and user stories on this project I used GitHub Projects. For
 
 ### Project Goal (backend) <a name="goals-be"></a>
 
-The goal of the the backend API is to create a fully functional social media application. Users will be able to post/update and delete posts/comments/likes/bookmarks and follows. 
+The goal of the backend API is to create a fully functional API which supplies data for a frontend react app. The admins will be able to post, update and delete posts/comments/likes/bookmarks and follows within the development environment of the API (when debug is set to True). Outside of the development environment, Users will be able to do the same from the frontend react app accessing the API which serves JSON data directly to the frontend. 
+
 
 ### Scope (backend) <a name="scope-be"></a>
+For this project to be fulfilled within 19 days, the API needed to be finished realistically within 5-6 days, to allow more time spent on the frontend React app, allowing a minimum of 2 days for README documentation to be fulfilled at the end. Taking this into account, our scope is small and aims to cover the basic functionality of what a social media application needs, developing upon this post-production. I applied labels of 'Could Have', 'Should Have' and 'Must Have' to give priority to the tasks set out in the [PhotoFootprint GitHub Project](https://github.com/users/AlfredA93/projects/6).
+
+The project will have appropriate apps to fulfil the following tasks:
+- CRUD functionality on Posts **(Must Have)**
+- CRUD functionality on Comments **(Must Have)**
+- Create, Read and Delete functionality on Likes **(Must Have)**
+- Create, Read and Delete functionality on Followers **(Must Have)**
+- Create, Read and Delete functionality on Bookmarks **(Should Have)**
+- Create functionality on Contact Us form. **(Could Have)**
 
 
 ### Structure (backend) <a name="structure-be"></a>
+
+- Post Model
+- Profile Model
+- Comment Model
+- Like Model
+- Follower Model
+- Bookmark Model
+- Message Model
+
+## Features
+
+### Future Features
+- Add a map model for setting coordinates, so users can store their journey's and share them on each post.
 
 ## Deployment <a name="deploy-be"></a>
 
@@ -175,6 +198,7 @@ PhotoFootprint was inspired and supported by the brilliant walkthrough project c
 - [Tiny Img](https://tiny-img.com/webp/) - convert png to webp images for README documentation screenshots.
 
 ### Media <a name="media-be"></a>
+- Default Profile and Post images were taken from Code Institute Walkthrough in their learning materials.
 
 # Overall Learning Outcomes <a name="outcomes"></a>
 
