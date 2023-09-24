@@ -70,6 +70,9 @@
 
 ## Deployment <a name="deploy"></a>
 
+## [Testing](TESTING.md)
+All testing and code validation is shown in the seperate [TESTING.md](TESTING.md) file.
+
 ## Libraries Used <a name="libs"></a>
 
 ## Credits <a name="creds"></a>
@@ -125,12 +128,17 @@ To manage the tasks and user stories on this project I used GitHub Projects. For
 
 ### Project Goal (backend) <a name="goals-be"></a>
 
+The goal of the the backend API is to create a fully functional social media application. Users will be able to post/update and delete posts/comments/likes/bookmarks and follows. 
+
 ### Scope (backend) <a name="scope-be"></a>
 
 
 ### Structure (backend) <a name="structure-be"></a>
 
 ## Deployment <a name="deploy-be"></a>
+
+## [Testing](TESTING.md)
+All testing and code validation is shown in the seperate [TESTING.md](TESTING.md) file.
 
 ## Libraries Used <a name="libs-be"></a>
 - Cloudinary - [`pip install cloudinary==1.34.0`](https://pypi.org/project/cloudinary/) - Cloud based image storage
@@ -157,6 +165,7 @@ PhotoFootprint was inspired and supported by the brilliant walkthrough project c
 - [AbstractAPI - Django Send Email](https://www.abstractapi.com/guides/django-send-email): Brilliant helpsheet and tutorial for setting up Django `send_mail()` functionality.
 - [Django send_mail documentation](https://docs.djangoproject.com/en/3.2/topics/email/)
 - [Django REST Auth Documentation](https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+- [Adding contents table to README file](https://community.atlassian.com/t5/Bitbucket-questions/How-to-write-a-table-of-contents-in-a-Readme-md/qaq-p/673363)
 
 ### Technology <a name="tech-be"></a>
 - [Cloudinary](www.cloudinary.com): For image storage
