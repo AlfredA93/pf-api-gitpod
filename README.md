@@ -132,7 +132,9 @@ The goal of the backend API is to create a fully functional API which supplies d
 
 
 ### Scope (backend) <a name="scope-be"></a>
-For this project to be fulfilled within 19 days, the API needed to be finished realistically within 5-6 days, to allow more time spent on the frontend React app, allowing a minimum of 2 days for README documentation to be fulfilled at the end. Taking this into account, our scope is small and aims to cover the basic functionality of what a social media application needs, developing upon this post-production. I applied labels of 'Could Have', 'Should Have' and 'Must Have' to give priority to the tasks set out in the [PhotoFootprint GitHub Project](https://github.com/users/AlfredA93/projects/6).
+Our scope for this project is small and aims to cover the basic functionality of what a social media application needs, this is due to having a short timeframe to meet the deadline for this project. The project would be further developed upon post-production. 
+
+This project needs to be fulfilled within 19 days, the API would need to be finished within 5-6 days (realistically), to allow more time spent on the frontend React app (9-10 days), allowing a minimum of 2 days for README documentation to be fulfilled at the end. Taking this into account,  I applied labels of 'Could Have', 'Should Have' and 'Must Have' to give priority to the tasks set out in the [PhotoFootprint GitHub Project](https://github.com/users/AlfredA93/projects/6).
 
 The project will have appropriate apps to fulfil the following tasks:
 - CRUD functionality on Posts **(Must Have)**
