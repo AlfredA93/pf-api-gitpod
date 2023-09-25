@@ -1,0 +1,36 @@
+.App {
+    font-family: 'Assistant', sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: #505050;
+    transition: color ease-in-out 0.2s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:hover i {
+    color: #00a000;
+    transition: color ease-in-out 0.2s;
+}
+
+i {
+    color: #cfced3;
+    font-size: 1.75rem;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+i:hover {
+    cursor: pointer;
+    transition: color ease-in-out 0.3s;
+    color: #00a000;
+}
