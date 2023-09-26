@@ -53,6 +53,7 @@ const handleSubmit = async (event) => {
                 placeholder="Username"
                 name="username"
                 onChange={handleChange}
+                value={username}
               />
             </Form.Group>
             {errors.username?.map((message, idx) =>
@@ -67,6 +68,7 @@ const handleSubmit = async (event) => {
                 placeholder="Password"
                 name="password1"
                 onChange={handleChange}
+                value={password1}
               />
             </Form.Group>
             {errors.password1?.map((message, idx) =>
@@ -81,6 +83,7 @@ const handleSubmit = async (event) => {
                 placeholder="Confirm password"
                 name="password2"
                 onChange={handleChange}
+                value={password2}
               />
             </Form.Group>
             {errors.password2?.map((message, idx) =>
