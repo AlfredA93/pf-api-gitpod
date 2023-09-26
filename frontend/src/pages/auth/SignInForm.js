@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -13,33 +14,29 @@ import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import axios from "axios";
 
 function SignInForm() {
-  //   Add your component logic here
+
   const [signInData, setSignInData] = useState({
     username: "",
     password: "",
   });
-
-  const {username, password} = signInData;
+  const { username, password } = signInData;
 
   const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post("/dj-rest-auth/login/", signInData);
-        history.push("/");
-    } catch(err) {
-
-    }
+      await axios.post("/dj-rest-auth/login/", signInData);
+      history.push("/");
+    } catch (err) {}
   };
 
   const handleChange = (event) => {
-    setSignInData ({
-        ...signInData,
-        [event.target.name]: event.target.value,
+    setSignInData({
+      ...signInData,
+      [event.target.name]: event.target.value,
     });
   };
 
