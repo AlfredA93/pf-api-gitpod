@@ -6,7 +6,7 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import axios from "axios";
 
-import { Form, Button, Image, Col, Row, Container } from "react-bootstrap";
+import { Form, Button, Image, Col, Row, Container, Alert } from "react-bootstrap";
 
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
@@ -55,26 +55,37 @@ const handleSubmit = async (event) => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.username?.map((message, idx) =>
+             <Alert variant="warning" key={idx}>{message}</Alert>
+            )}
 
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
+                className={styles.Input}
                 type="password"
                 placeholder="Password"
                 name="password1"
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.password1?.map((message, idx) =>
+             <Alert variant="warning" key={idx}>{message}</Alert>
+            )}
 
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
+                className={styles.Input}
                 type="password"
                 placeholder="Confirm password"
                 name="password2"
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.password2?.map((message, idx) =>
+             <Alert variant="warning" key={idx}>{message}</Alert>
+            )}
 
             <Button
               className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
@@ -82,6 +93,11 @@ const handleSubmit = async (event) => {
             >
               Sign Up
             </Button>
+            {errors.non_field_errors?.map((message, idx) =>
+             <Alert variant="warning" key={idx} className="m-2">
+                {message}
+            </Alert>
+            )}
           </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
