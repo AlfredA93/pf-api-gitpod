@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -8,14 +8,40 @@ import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import axios from "axios";
 
 function SignInForm() {
   //   Add your component logic here
+  const [signInData, setSignInData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const {username, password} = signInData;
+
+  const history = useHistory();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+        await axios.post("/dj-rest-auth/login/", signInData);
+        history.push("/");
+    } catch(err) {
+
+    }
+  };
+
+  const handleChange = (event) => {
+    setSignInData ({
+        ...signInData,
+        [event.target.name]: event.target.value,
+    });
+  };
 
   return (
     <Row className={styles.Row}>
@@ -30,16 +56,20 @@ function SignInForm() {
                 placeholder="Username"
                 name="username"
                 className={styles.Input}
+                value={username}
+                onChange={handleChange}
               />
             </Form.Group>
 
-            <Form.Group ControlId="password">
+            <Form.Group controlId="password">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Password"
                 className={styles.Input}
                 name="password"
+                value={password}
+                onChange={handleChange}
               />
             </Form.Group>
             <Button
